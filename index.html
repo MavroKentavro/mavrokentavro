@@ -2,20 +2,78 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mavrokentavro</title>
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 48px; line-height: 1.5; }
-    .wrap { max-width: 720px; }
-    h1 { margin: 0 0 16px; font-size: 32px; }
-    p { margin: 0 0 12px; }
-    a { color: inherit; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shim’s Lines</title>
+  <meta name="description" content="Shim’s Lines — тексты: Bare Lines, Places, Side Notes, Shorts, Long." />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <h1>Mavrokentavro</h1>
-    <p>Lines: <a href="https://shimulsky.notion.site/lines" rel="noopener" target="_blank">Notion page</a></p>
-  </div>
+  <main class="wrap">
+    <header class="surface">
+      <div class="header">
+        <div class="brand">✍️ <span class="mono">Shim’s Lines</span></div>
+        <h1>Shim’s Lines</h1>
+        <p class="lead">
+          Привет, я Алексей Шимульский, а эти тексты — мое «безответственное творчество».
+          Формат, в котором мне можно абсолютно все. Я разрешил себе писать сколь угодно пошло,
+          любительски, наплевательски, исключительно для собственного удовольствия.
+        </p>
+      </div>
+
+      <nav class="nav" aria-label="Навигация">
+        <a class="chip" href="./bare.html">🖤 Bare Lines</a>
+        <a class="chip" href="./places.html">🗺️ Places</a>
+        <a class="chip" href="./sidenotes.html">📝 Side Notes</a>
+        <a class="chip" href="./shorts.html">⚡ Shorts</a>
+        <a class="chip" href="./long.html">📚 Long</a>
+      </nav>
+    </header>
+
+    <section class="grid" aria-label="Разделы">
+      <article class="card">
+        <div class="kicker">🖤 Раздел</div>
+        <h2 class="title">Bare Lines</h2>
+        <p class="preview">Туго скрученные темные косы наивно соблазняли змеиным танцем: скользили по медной коже…</p>
+        <a class="btn" href="./bare.html">Открыть раздел →</a>
+      </article>
+
+      <article class="card">
+        <div class="kicker">🗺️ Раздел</div>
+        <h2 class="title">Places</h2>
+        <p class="preview">Когда я умру, пусть мой рай будет как старый отель в горах. Когда-то помпезный…</p>
+        <a class="btn" href="./places.html">Открыть раздел →</a>
+      </article>
+
+      <article class="card">
+        <div class="kicker">📝 Раздел</div>
+        <h2 class="title">Side Notes</h2>
+        <p class="preview">Едем к друзьям — как будто мы герои романтичного артхауса. По уровню чувств и красок…</p>
+        <a class="btn" href="./sidenotes.html">Открыть раздел →</a>
+      </article>
+
+      <article class="card">
+        <div class="kicker">⚡ Раздел</div>
+        <h2 class="title">Shorts</h2>
+        <p class="preview">Весенний узел – не каждой змее суждено. Мясо на трассе.</p>
+        <a class="btn" href="./shorts.html">Открыть раздел →</a>
+      </article>
+
+      <article class="card">
+        <div class="kicker">📚 Раздел</div>
+        <h2 class="title">Long</h2>
+        <p class="preview">Длинные тексты и рассказы: «Собака мордой вверх», «Она», «Срамные грамоты».</p>
+        <a class="btn" href="./long.html">Открыть раздел →</a>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Shim’s Lines</div>
+      <div class="mono">Static HTML • Offline-ready</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
