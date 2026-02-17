@@ -2,28 +2,56 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Under Construction</title>
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;600&family=Space+Grotesk:wght@400;600&family=Cormorant+Garamond:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+
         <style>
             body {
                 margin: 0;
-                height: 100vh;
+                background: #111;
+                color: white;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
-                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-                color: white;
+                height: 100vh;
+                transition: background 0.6s ease;
             }
 
             h1 {
-                font-size: 56px;
+                font-size: 48px;
                 font-weight: 600;
-                letter-spacing: 4px;
-                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: all 0.8s ease;
             }
         </style>
     </head>
+
     <body>
-        <h1>Under Construction</h1>
+        <h1 id="title">Under Construction</h1>
+
+        <script>
+            const fonts = [
+                "'Playfair Display', serif",
+                "'Inter', sans-serif",
+                "'Space Grotesk', sans-serif",
+                "'Cormorant Garamond', serif",
+                "'IBM Plex Sans', sans-serif",
+            ];
+
+            let index = 0;
+            const title = document.getElementById("title");
+
+            setInterval(() => {
+                index = (index + 1) % fonts.length;
+                title.style.fontFamily = fonts[index];
+            }, 3000);
+        </script>
     </body>
 </html>
